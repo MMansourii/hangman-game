@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #34495e;
+    color: #fff;
+    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    margin: 0px;
+    overflow: hidden;
+}
+h1{
+    margin: 40px 0px;
+}
+.game-container{
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    width: 450px;
+}
+.figure-container{
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 3px ;
+    stroke-linecap: round;
+
+}
+.figure-part{
+    display: none;
+}
+.wrong-letter-comtainer{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.wrong-letter-comtainer p{
+    margin: 0px 0px 5px;
+    
+}
+.wrong-letter-comtainer span{
+    font-size: 24px;
+}
+.word  {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.letter{
+    border-bottom: 3px solid #2980b9;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 3px;
+    width: 20px;
+    height: 50px;
+    font-size: 30px;
+}
+.popup-container{
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.popup{
+    background-color: #2980b9;
+    border-radius: 5px;
+    box-shadow: 0px 15px 10px 3px rgba(0,0,0,0.5) ;
+    padding: 20px;
+    text-align: center;
+}
+.popup button  {
+    cursor: pointer;
+    background-color: #fff;
+    color: #29809b;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+}
+.popup button:focus{
+    outline: none;
+}
+.popup button:active{
+    transform: scale(0.98);
+}
+.notification{
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px 10px 0px 0px;
+    padding: 15px;
+    position: absolute;
+    bottom: -55px;
+    transition: transform 0.3s ease-in-out;
+}
+.notification p{
+    margin: 0px;
+}
+.notification.show{
+    transform: translateY(-50px);
+}
